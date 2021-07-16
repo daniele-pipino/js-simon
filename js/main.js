@@ -22,6 +22,7 @@ Consigli del giorno:
 
 var generatedNumber = [];
 var userChoice = [];
+var commonElement = [];
 
 // generare i 5 numeri randomici
 
@@ -47,23 +48,59 @@ var displayedNumber = alert(generatedNumber);
 // creazione del countdown di 30 secondi
 
 var seconds = 10;
-
 var userNumber;
 
 // inizializzazione countdown
 var countdown = setInterval(function () {
+
     if (seconds == 0) {
         clearInterval(countdown);
         while (userChoice.length < 5) {
             userNumber = parseInt(prompt('Inserisci un numero'));
             userChoice.push(userNumber);
         }
+
+        // controllo dei numeri uguali
+        for (var i = 0; i < generatedNumber.length; i++) {
+            for (var j = 0; j < userChoice.length; j++) {
+                if (generatedNumber[i] == userChoice[j]) { // If item is present in both arrays
+                    commonElement.push(generatedNumber[i]); // Push to common array
+                }
+            }
+        }
+
+        console.log(commonElement);
+    } else {
+        seconds--;
+        console.log(seconds);
     }
-    seconds--;
-    console.log(seconds);
+
+
 }, 1000);
 
-console.log(userChoice);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
