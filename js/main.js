@@ -63,23 +63,21 @@ var countdown = setInterval(function () {
         // controllo dei numeri uguali
         for (var i = 0; i < generatedNumber.length; i++) {
             for (var j = 0; j < userChoice.length; j++) {
-                if (generatedNumber[i] == userChoice[j]) { // If item is present in both arrays
-                    commonElement.push(generatedNumber[i]); // Push to common array
+                if (generatedNumber[i] == userChoice[j]) {    // If item is present in both arrays
+                    commonElement.push(generatedNumber[i]);    // Push to common array
                 }
             }
         }
 
         // Punteggio
         console.log('Numeri indovinati', commonElement);
-        console.log('Score', commonElement.lenght);
+        console.log('Score', commonElement.length);
 
 
     } else {
         seconds--;
         console.log(seconds);
     }
-
-
 }, 1000);
 
 
