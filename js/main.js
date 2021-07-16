@@ -21,10 +21,11 @@ Consigli del giorno:
 //* array contenenti nuemeri randomici
 
 var generatedNumber = [];
+var userChoice = [];
 
 // generare i 5 numeri randomici
 
-function randomNumberGeneration(num) {
+function randomNumberGeneration() {
 
     while (generatedNumber.length < 5) {
         var randomNumber = Math.floor(Math.random() * 100) + 1;
@@ -37,3 +38,33 @@ function randomNumberGeneration(num) {
 // invocazione funzione
 randomNumberGeneration();
 console.log(generatedNumber);
+
+
+// inserimento dei numeri generati in un alert
+var displayedNumber = alert(generatedNumber);
+
+
+// creazione del countdown di 30 secondi
+
+var seconds = 10;
+
+var userNumber;
+
+// inizializzazione countdown
+var countdown = setInterval(function () {
+    if (seconds == 0) {
+        clearInterval(countdown);
+        while (userChoice.length < 5) {
+            userNumber = parseInt(prompt('Inserisci un numero'));
+            userChoice.push(userNumber);
+        }
+    }
+    seconds--;
+    console.log(seconds);
+}, 1000);
+
+console.log(userChoice);
+
+
+
+
