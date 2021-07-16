@@ -69,7 +69,11 @@ var countdown = setInterval(function () {
             }
         }
 
-        console.log(commonElement);
+        // Punteggio
+        console.log('Numeri indovinati', commonElement);
+        console.log('Score', commonElement.lenght);
+
+
     } else {
         seconds--;
         console.log(seconds);
@@ -77,6 +81,9 @@ var countdown = setInterval(function () {
 
 
 }, 1000);
+
+
+
 
 
 
