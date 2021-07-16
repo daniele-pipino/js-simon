@@ -8,4 +8,32 @@ Consigli del giorno:
 * Individuate gli elementi di cui avete bisogno per realizzare il programma.
 * Commentate il codice. */
 
-// 
+// traccia
+
+// 1. Generare 5 numeri randomici 
+// 2. Inserire i 5 numeri generati in un alert
+// 3. Far partire un timer di 30 secondi
+// 4. Chidere in ordine i numeri all'utente
+// 5. verificare quanti e quali numeri sono stati indovinati
+
+// -------------SVOLGIMENTO----------------------------
+
+//* array contenenti nuemeri randomici
+
+var generatedNumber = [];
+
+// generare i 5 numeri randomici
+
+function randomNumberGeneration(num) {
+
+    while (generatedNumber.length < 5) {
+        var randomNumber = Math.floor(Math.random() * 100) + 1;
+        if (!generatedNumber.includes(randomNumber)) {
+            generatedNumber.push(randomNumber)
+        }
+    }
+}
+
+// invocazione funzione
+randomNumberGeneration();
+console.log(generatedNumber);
